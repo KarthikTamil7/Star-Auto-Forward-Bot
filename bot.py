@@ -19,7 +19,7 @@ class channelforward(Client):
             bot_token = Config.BOT_TOKEN,
             api_id = Config.API_ID,
             api_hash = Config.API_HASH,
-            workers = 20,
+            workers = 1,
             plugins = dict(
                 root="Plugins"
             )
