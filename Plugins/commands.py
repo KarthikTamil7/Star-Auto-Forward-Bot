@@ -23,6 +23,17 @@ async def start(c, m):
                            reply_to_message_id=m.message_id)
 
 ################################################################################################################################################################################################################################################
+# help command
+
+@channelforward.on_message(filters.command(["help"]))
+async def help(c, m):
+      await c.send_message(chat_id=m.chat.id,
+                           text=Translation.HELP,
+                           parse_mode="html",
+                           disable_web_page_preview=True,
+                           reply_to_message_id=m.message_id)
+
+################################################################################################################################################################################################################################################
 # about command
 
 @channelforward.on_message(filters.command(["about"]))
